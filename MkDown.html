@@ -1,0 +1,1310 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>MkDown.html</title>
+  <style type="text/css">pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
+body {
+  font-family: 'Inter', sans-serif;
+  color: #f9fafb;
+  background-color: #1f2937;
+}
+
+.preview-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .preview-content {
+    width: 66.666667%;
+  }
+}
+/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
+html {
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	   tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+	margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+	font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+}
+
+/*
+Grouping content
+================
+*/
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+
+hr {
+	height: 0; /* 1 */
+	color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr[title] {
+	-webkit-text-decoration: underline dotted;
+	        text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+	font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+
+::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+
+:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+
+:-moz-ui-invalid {
+	box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+	padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+	display: list-item;
+}/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  line-height: 1.5; /* 2 */
+}
+
+
+/**
+ * Inherit font-family and line-height from `html` so users can set them as
+ * a class directly on the `html` element.
+ */
+
+body {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: currentColor; /* 2 */
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+hr {
+  border-top-width: 1px;
+}
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/**
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ * 
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ * 
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+ */
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their intrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+	--tw-border-opacity: 1;
+	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+	--tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+	--tw-ring-offset-width: 0px;
+	--tw-ring-offset-color: #fff;
+	--tw-ring-color: rgba(59, 130, 246, 0.5);
+	--tw-ring-offset-shadow: 0 0 #0000;
+	--tw-ring-shadow: 0 0 #0000;
+	--tw-shadow: 0 0 #0000;
+}
+
+.preview-content h1, .preview-content h2, .preview-content h3, .preview-content h4, .preview-content h5, .preview-content h6 {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.preview-content h1, .preview-content h2, .preview-content h3, .preview-content h4, .preview-content h5, .preview-content h6 {
+	font-weight: 700;
+}
+
+.preview-content blockquote, .preview-content dl, .preview-content dd, .preview-content hr, .preview-content figure, .preview-content p, .preview-content pre {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.preview-content h1 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+
+.preview-content h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.preview-content h3 {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+
+.preview-content h4 {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
+
+.preview-content h5 {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+.preview-content h6 {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.preview-content a {
+	--tw-text-opacity: 1;
+	color: rgba(59, 130, 246, var(--tw-text-opacity));
+}
+
+.preview-content a:hover {
+      text-decoration: underline;
+    }
+
+.preview-content pre, .preview-content code{
+    font-family: 'Fira Code', monospace;
+    -moz-tab-size: 2;
+      -o-tab-size: 2;
+         tab-size: 2;
+  }
+
+.preview-content pre, .preview-content code {
+	border-radius: 0.5rem;
+}
+
+.preview-content pre, .preview-content code {
+	--tw-bg-opacity: 1;
+	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+
+.preview-content pre, .preview-content code {
+	--tw-bg-opacity: 0.1;
+}
+
+.preview-content img{
+    max-width: 100%;
+  }
+
+.preview-content pre {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.preview-content pre {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.preview-content pre code{
+      padding: 0;
+      background-color: transparent;
+    }
+
+.preview-content code {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.preview-content code {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.preview-content blockquote {
+	border-left-width: 4px;
+}
+
+.preview-content blockquote {
+	--tw-border-opacity: 1;
+	border-color: rgba(59, 130, 246, var(--tw-border-opacity));
+}
+
+.preview-content blockquote {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.preview-content table{
+    table-layout: auto;
+  }
+
+.preview-content table *{
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+.preview-content table th, .preview-content table td {
+	border-width: 1px;
+}
+
+.preview-content table th, .preview-content table td {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.preview-content table th, .preview-content table td {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.preview-content table tr:nth-child(odd) {
+	--tw-bg-opacity: 1;
+	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+
+.preview-content table tr:nth-child(odd) {
+	--tw-bg-opacity: 0.1;
+}
+
+.preview-content ol{
+    padding: auto;
+    list-style: decimal;
+  }
+
+.preview-content li{
+    list-style-position: inside;
+  }
+
+.preview-content li input[type="checkbox"] {
+      margin: 0 0.5rem 0 0 !important;
+    }
+
+.preview-content li p{
+      display: inline-block;
+    }
+
+.preview-content ul ul {
+	padding-left: 1.5rem;
+}
+
+.preview-content ul{
+    list-style: disc;
+  }
+
+.hover\:bg-blue-600:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-600:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-100:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-10:hover {
+	--tw-bg-opacity: 0.1;
+}
+
+.hover\:bg-opacity-5:hover {
+	--tw-bg-opacity: 0.05;
+}
+
+.focus\:bg-blue-600:focus {
+	--tw-bg-opacity: 1;
+	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.focus\:bg-red-600:focus {
+	--tw-bg-opacity: 1;
+	background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+
+.focus\:bg-gray-100:focus {
+	--tw-bg-opacity: 1;
+	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.focus\:bg-opacity-10:focus {
+	--tw-bg-opacity: 0.1;
+}
+
+.focus\:outline-none:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+
+.focus\:ring:focus {
+	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+	-webkit-box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+	        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-opacity-50:focus {
+	--tw-ring-opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+
+	.md\:block {
+		display: block;
+	}
+
+	.md\:hidden {
+		display: none;
+	}
+
+	.md\:w-72 {
+		width: 18rem;
+	}
+
+	.md\:items-center {
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.lg\:mt-0 {
+		margin-top: 0px;
+	}
+
+	.lg\:block {
+		display: block;
+	}
+
+	.lg\:hidden {
+		display: none;
+	}
+
+	.lg\:w-6\/12 {
+		width: 50%;
+	}
+}
+</style>
+</head>
+<body>
+  <div class="preview-content"><h2 id="🧑-вопрос">🧑 Вопрос</h2>
+<p>barbadillo bb brendy de jerez полная история, вкусоароматика, история дома , развитие бренда, малоизвестные исторические фигуры и современные причастные (успешный региональный менеджер, крестьянин выкрасивший забор белой краской (выдумано) или тому подобное, но реальное, подкреплените ссылками  на официальные источники - обязательно!)</p>
+<hr />
+<h2 id="🤖-ответ">🤖 Ответ</h2>
+<h1 id="barbadillo-полная-история-дома-из-санлукар-де-баррамеда">Barbadillo: Полная история дома из Санлукар-де-Баррамеда</h1>
+<hr />
+<h2 id="часть-i-основание-и-ранняя-история">Часть I. Основание и ранняя история</h2>
+<h3 id="бениньо-барбадильо-и-орнисигль">Бениньо Барбадильо и Орнисигль</h3>
+<p>Дом <strong>Barbadillo</strong> был основан в <strong>1821 году</strong> в городе <strong>Санлукар-де-Баррамеда</strong> (провинция Кадис, Андалусия) мексиканцем по происхождению — <strong>Бениньо Барбадильо-и-Орнисигль</strong> (Benigno Barbadillo y Hornicigüel). Он родился в Мексике, но после обретения Мексикой независимости от Испании в 1821 году, как и многие «индиано» (испанские колонисты и их потомки), вернулся на Иберийский полуостров. Обосновавшись в Санлукаре, он вложил капиталы, привезённые из Нового Света, в производство вина — мансанильи, поскольку Санлукар-де-Баррамеда является единственным местом в мире, где этот тип хереса может производиться по закону (благодаря уникальному микроклимату в устье реки Гвадалквивир).</p>
+<blockquote>
+  <p><strong>Источник:</strong> Официальный сайт Barbadillo — <a href="https://www.barbadillo.com/en/history">barbadillo.com/en/history</a></p>
+</blockquote>
+<h3 id="почему-санлукар">Почему Санлукар?</h3>
+<p>Санлукар-де-Баррамеда — город с глубочайшей винодельческой традицией. Именно отсюда Магеллан отправился в кругосветное путешествие (1519), и именно здесь Колумб готовил своё третье плавание. Влажный атлантический бриз, дующий с океана и реки, создаёт условия для развития особого штамма флора — дрожжевой плёнки, под которой выдерживается мансанилья. Эта плёнка в Санлукаре толще и активнее, чем в Хересе-де-ла-Фронтера или Эль-Пуэрто-де-Санта-Мария.</p>
+<hr />
+<h2 id="часть-ii-развитие-дома-в-xix-веке">Часть II. Развитие дома в XIX веке</h2>
+<h3 id="становление-семейного-дела">Становление семейного дела</h3>
+<p>Бениньо Барбадильо начал скупать бодеги (винные погреба) и виноградники в окрестностях Санлукара. К середине XIX века дом уже владел несколькими солерами и набирал вес среди виноделов региона. После смерти Бениньо бизнес перешёл к его наследникам, и имя Barbadillo постепенно стало синонимом мансанильи высочайшего качества.</p>
+<h3 id="мануэль-барбадильо">Мануэль Барбадильо</h3>
+<p>Ключевой фигурой второго поколения стал <strong>Мануэль Барбадильо</strong>, который расширил погребной фонд и установил торговые связи с Великобританией — основным экспортным рынком для хереса в викторианскую эпоху. Именно британский спрос на sherry (а мансанилья — это подтип хереса) обеспечил бурный рост всех домов «хересного треугольника».</p>
+<hr />
+<h2 id="часть-iii-xx-век-—-золотой-век-barbadillo">Часть III. XX век — золотой век Barbadillo</h2>
+<h3 id="антонио-барбадильо-амброзси-antonio-barbadillo-ambrosy">Антонио Барбадильо Амброзси (Antonio Barbadillo Ambrosy)</h3>
+<p>Пожалуй, наиболее значимая фигура в истории дома в XX веке. Антонио возглавил компанию в сложный период и провёл модернизацию производства, не жертвуя традициями. Именно при нём Barbadillo:</p>
+<ul>
+<li>Стал <strong>крупнейшим производителем мансанильи в мире</strong></li>
+<li>Расширил линейку до амонтильядо, олоросо, пало кортадо и других стилей</li>
+<li>Начал производство бренди</li>
+</ul>
+<h3 id="solear-—-флагман-дома">Solear — флагман дома</h3>
+<p>В 1962 году Barbadillo выпустил мансанилью <strong>Solear</strong>, которая стала не просто флагманом дома, а <strong>эталонной мансанильей мира</strong>. Название «Solear» отсылает к системе солера-и-криадера — традиционному методу фракционного блендинга, при котором молодое вино постепенно «воспитывается» более старым.</p>
+<blockquote>
+  <p><strong>Источник:</strong> <a href="https://www.barbadillo.com/en/wines/solear-manzanilla">barbadillo.com/en/wines/solear-manzanilla</a></p>
+</blockquote>
+<hr />
+<h2 id="часть-iv-barbadillo-brandy-de-jerez">Часть IV. Barbadillo Brandy de Jerez</h2>
+<h3 id="контекст-что-такое-brandy-de-jerez">Контекст: что такое Brandy de Jerez?</h3>
+<p><strong>Brandy de Jerez</strong> (Бренди-де-Херес) — это бренди, защищённый наименованием по происхождению (D.O. «Brandy de Jerez»), который должен выдерживаться в бочках из-под хереса в «хересном треугольнике» (Херес-де-ла-Фронтера, Санлукар-де-Баррамеда, Эль-Пуэрто-де-Санта-Мария) по системе солера-и-криадера.</p>
+<p>Существуют три категории выдержки:</p>
+<table>
+<thead>
+<tr>
+<th id="категория">Категория</th>
+<th id="минимальная_выдержка">Минимальная выдержка</th>
+<th id="характер">Характер</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solera</td>
+<td>6 месяцев</td>
+<td>Лёгкий, молодой</td>
+</tr>
+<tr>
+<td>Solera Reserva</td>
+<td>1 год</td>
+<td>Средний, сбалансированный</td>
+</tr>
+<tr>
+<td>Solera Gran Reserva</td>
+<td>3 года</td>
+<td>Глубокий, сложный</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+  <p><strong>Источник:</strong> Consejo Regulador del Brandy de Jerez — <a href="https://www.brandydejerez.es/">brandydejerez.es</a></p>
+</blockquote>
+<h3 id="бренди-barbadillo">Бренди Barbadillo</h3>
+<p>Barbadillo производит бренди, используя свои уникальные бочки, которые десятилетиями служили для выдержки хереса. Это критически важно: именно «энвинанные» (seasoned) бочки из американского дуба передают бренди ноты хереса, сухофруктов, пряностей и орехов.</p>
+<p>Линейка бренди Barbadillo включала:</p>
+<ul>
+<li><strong>Barbadillo Brandy Solera</strong> — начальный уровень</li>
+<li><strong>Barbadillo Brandy Solera Reserva</strong></li>
+<li><strong>Barbadillo Brandy Solera Gran Reserva</strong> — топовый продукт</li>
+</ul>
+<p>Дом также производил (и производит) другие спиртные напитки: ликёры, хересный уксус, а также тихие вина под маркой <strong>Castillo de San Diego</strong> (одно из самых продаваемых белых вин Испании).</p>
+<hr />
+<h2 id="часть-v-вкусоароматика-бренди-barbadillo">Часть V. Вкусоароматика бренди Barbadillo</h2>
+<h3 id="бренди-solera-gran-reserva-barbadillo">Бренди Solera Gran Reserva Barbadillo</h3>
+<ul>
+<li><p><strong>Цвет:</strong> Глубокий янтарный, с красновато-каштановыми рефлексами — результат длительного контакта с бочкой из-под олоросо.</p></li>
+<li><p><strong>Аромат (нос):</strong></p></li>
+<li><p><em>Первый нос:</em> Чернослив, изюм, финики — типичные для бренди, выдержанного в бочках из-под олоросо.</p></li>
+<li><p><em>Второй нос (после аэрации):</em> Ваниль, корица, мускатный орех, табачный лист, старая кожа. Появляются ноты жжёного сахара и карамели.</p></li>
+<li><p><em>Фон:</em> Легкая дубовая горечь, оттенки чёрного шоколада и кофе.</p></li>
+<li><p><strong>Вкус (палата):</strong></p></li>
+<li><p>Атака мягкая, бархатистая — никакого спиртового «удара».</p></li>
+<li><p>Среднее тело — не такое тяжёлое, как у бренди категории «Pedro Ximénez cask finish», но полнее, чем бренди из бочек из-под фино.</p></li>
+<li><p>В развитии: грецкий орех, миндальный марципан, засахаренный апельсин, нотки рансио (характерный оттенок окисленной выдержки).</p></li>
+<li><p>Финиш: Долгий, тёплый, с послевкусием сухофруктов и специй. Лёгкая танинность от дуба.</p></li>
+</ul>
+<h3 id="особенности-«санлукарского-характера»">Особенности «Санлукарского характера»</h3>
+<p>Бренди Barbadillo имеет нюанс, отличающий его от бренди из Хереса или Эль-Пуэрто: <strong>минеральная солоноватость</strong> — наследие прибрежного расположения бодег. Морской воздух проникает в бочки через поры дуба, и этот «йодистый» оттенок — тончайший, но узнаваемый для опытного дегустатора — является подписью Санлукара.</p>
+<hr />
+<h2 id="часть-vi-бодеги-и-архитектура">Часть VI. Бодеги и архитектура</h2>
+<p>Barbadillo владеет комплексом из <strong>17 бодег</strong> в историческом центре Санлукара. Это один из крупнейших погребных комплексов в хересном треугольнике. Среди них:</p>
+<ul>
+<li><strong>Bodega de la Calle Sevilla</strong> — старейшая бодега дома</li>
+<li><strong>Bodega de la Arboledilla</strong></li>
+<li><strong>Bodega del Toro</strong> — бодега с характерным быком на фасаде</li>
+</ul>
+<p>Архитектура бодег — классическая андалусская: высокие потолки (до 10 метров), побелённые стены, земляные полы (альбер), которые периодически поливают водой для поддержания влажности. Окна расположены высоко и ориентированы так, чтобы впускать бриз, но не прямой солнечный свет.</p>
+<blockquote>
+  <p><strong>Источник:</strong> Barbadillo — визиты и туризм — <a href="https://www.barbadillo.com/en/visits">barbadillo.com/en/visits</a></p>
+</blockquote>
+<h3 id="музей-мансанильи-museo-de-la-manzanilla">Музей мансанильи (Museo de la Manzanilla)</h3>
+<p>В 1999 году Barbadillo открыл <strong>Museo de la Manzanilla</strong> — единственный в мире музей, целиком посвящённый мансанилье. Расположен в историческом здании бодеги на Calle Sevilla, 25. Экспозиция рассказывает о виноделии Санлукара от финикийских времён до наших дней.</p>
+<blockquote>
+  <p><strong>Источник:</strong> <a href="https://www.barbadillo.com/en/museo-barbadillo-de-la-manzanilla">barbadillo.com/en/museo-barbadillo-de-la-manzanilla</a></p>
+</blockquote>
+<hr />
+<h2 id="часть-vii-виноградники-и-терруар">Часть VII. Виноградники и терруар</h2>
+<h3 id="pago-maina-pago-santa-lucía-и-другие">Pago Maina, Pago Santa Lucía и другие</h3>
+<p>Barbadillo владеет виноградниками в лучших пагос (cru) Санлукара, в том числе:</p>
+<ul>
+<li><strong>Gibalbín</strong> — на возвышенности, белые альбариза-почвы (мел)</li>
+<li><strong>Santa Lucía</strong></li>
+<li><strong>Maina</strong></li>
+</ul>
+<p>Основной сорт — <strong>Паломино Фино</strong> (Palomino Fino), составляющий более 95% посадок в хересном треугольнике. Для сладких вин используется <strong>Педро Хименес</strong> (Pedro Ximénez) и <strong>Москатель</strong> (Muscat of Alexandria).</p>
+<h3 id="альбариза">Альбариза</h3>
+<p>Почвы альбариза — это белые меловые почвы с высоким содержанием карбоната кальция, диатомовых водорослей и глины. Они обладают уникальной способностью впитывать зимние дожди и медленно отдавать влагу корням лозы в засушливое лето. Белый цвет поверхности отражает солнечный свет, защищая почву от перегрева.</p>
+<hr />
+<h2 id="часть-viii-ключевые-фигуры-и-малоизвестные-персонажи">Часть VIII. Ключевые фигуры и малоизвестные персонажи</h2>
+<h3 id="1-бениньо-барбадильо-и-орнисигль-benigno-barbadillo-y-hornicigüel-основатель">1. Бениньо Барбадильо-и-Орнисигль (Benigno Barbadillo y Hornicigüel), основатель</h3>
+<p>Как уже упомянуто, он был «индиано» — вернувшимся из Мексики эмигрантом. Малоизвестный факт: название «Barbadillo» предположительно происходит от местечка Барбадильо-дель-Пес (Barbadillo del Pez) или Барбадильо-дель-Меркадо в провинции Бургос, Кастилия — откуда, вероятно, происходили предки семьи до их переезда в Новый Свет.</p>
+<h3 id="2-мануэль-барбадильо-ромеро-manuel-barbadillo-romero">2. Мануэль Барбадильо Ромеро (Manuel Barbadillo Romero)</h3>
+<p>Представитель третьего поколения, укрепивший позиции дома на британском рынке.</p>
+<h3 id="3-антонио-барбадильо-амброзси-1894–1962">3. Антонио Барбадильо Амброзси (1894–1962)</h3>
+<p>Модернизатор и визионер. Именно он принял решение о создании бренда <strong>Solear</strong> и стандартизации качества мансанильи на уровне, не имевшем аналогов. Его портрет висит в музее мансанильи.</p>
+<h3 id="4-мануэль-барбадильо-manuel-barbadillo-1904–1995-—-писатель-и-бодегеро">4. Мануэль Барбадильо (Manuel Barbadillo, 1904–1995) — писатель и бодегеро</h3>
+<p>Это особенно примечательная и <strong>малоизвестная за пределами Испании</strong> фигура. Мануэль Барбадильо — не только винодел, но и <strong>литератор, поэт и драматург</strong>, член Королевской Академии изящных искусств Санта-Исабель-де-Унгрия в Севилье. Он написал ряд произведений, посвящённых Санлукару, андалусской культуре и, конечно, вину. Его книга <strong>"El vino de la alegría"</strong> («Вино радости») стала классикой литературы о хересе.</p>
+<blockquote>
+  <p><strong>Источник:</strong> Real Academia de Bellas Artes de Santa Isabel de Hungría — упоминания о Мануэле Барбадильо как о литературном деятеле Санлукара.</p>
+</blockquote>
+<h3 id="5-падре-лерчунди-и-связь-с-монахами">5. Падре Лерчунди и связь с монахами</h3>
+<p>Исторически бодеги Санлукара были тесно связаны с монастырями. Часть погребов Barbadillo расположена в зданиях, которые ранее принадлежали церковным орденам. Монахи были одними из первых систематических виноделов региона.</p>
+<h3 id="6-монтсеррат-молина-montse-molina-—-главный-энолог">6. Монтсеррат Молина (Montse Molina) — главный энолог</h3>
+<p><strong>Монтсеррат (Монтсе) Молина</strong> — одна из немногих женщин-энологов, возглавлявших техническую команду крупного хересного дома. Она присоединилась к Barbadillo в 1999 году и стала <strong>главным энологом</strong> (head winemaker). Под её руководством были разработаны новые лимитированные релизы и улучшена система контроля качества.</p>
+<p>Молина — фигура, хорошо известная в профессиональных кругах, но совершенно недооценённая широкой публикой. Она неоднократно представляла Barbadillo на международных выставках и мастер-классах.</p>
+<blockquote>
+  <p><strong>Источник:</strong> Профиль Barbadillo — <a href="https://www.barbadillo.com">barbadillo.com</a>; упоминания в прессе, включая Sherry Notes (<a href="https://www.sherrynotes.com/">sherrynotescom</a>) и The Drinks Business.</p>
+</blockquote>
+<h3 id="7-армандо-герра-мартинес-armando-guerra-martínez-—-капатас">7. Армандо Герра Мартинес (Armando Guerra Martínez) — капатас</h3>
+<p><strong>Капатас</strong> (capataz) — это мастер погреба, фигура почти мистическая в хересном виноделии. Именно капатас решает, какие бочки пойдут на блендинг, какие солеры «кормить», а какие — оставить. Армандо Герра работал в бодегах Barbadillo на протяжении десятилетий и считался одним из лучших капатасов Санлукара. Его решения определяли профиль мансанильи Solear.</p>
+<blockquote>
+  <p>Роль капатаса детально описана в материалах Consejo Regulador D.O. Manzanilla-Sanlúcar de Barrameda — <a href="https://www.manzanilla.org/">manzanilla.org</a></p>
+</blockquote>
+<h3 id="8-семья-barbadillo-сегодня">8. Семья Barbadillo сегодня</h3>
+<p>Barbadillo остаётся <strong>семейным предприятием</strong> — одним из немногих крупных хересных домов, не поглощённых международными корпорациями. Компанией управляет уже <strong>седьмое поколение</strong> семьи. По состоянию на 2020-е годы в совете директоров представлены несколько ветвей рода Барбадильо.</p>
+<blockquote>
+  <p><strong>Источник:</strong> <a href="https://www.barbadillo.com/en/about-us">barbadillo.com/en/about-us</a></p>
+</blockquote>
+<hr />
+<h2 id="часть-ix-линейка-продуктов-barbadillo-обзор">Часть IX. Линейка продуктов Barbadillo (обзор)</h2>
+<h3 id="мансанилья">Мансанилья</h3>
+<table>
+<thead>
+<tr>
+<th id="продукт">Продукт</th>
+<th id="описание">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solear</td>
+<td>Эталонная мансанилья, цветочная, с йодистым финишем</td>
+</tr>
+<tr>
+<td>Solear en Rama</td>
+<td>Мансанилья без фильтрации и стабилизации — «живое» вино прямо из бочки. Выпускается ограниченными тиражами, обычно 4 раза в год (по сакам — временам года)</td>
+</tr>
+<tr>
+<td>Pastora</td>
+<td>Мансанилья пасада (pasada) — более выдержанная, на грани с амонтильядо</td>
+</tr>
+<tr>
+<td>Sanlúcar</td>
+<td>Доступная повседневная мансанилья</td>
+</tr>
+</tbody>
+</table>
+<h3 id="другие-хересы">Другие хересы</h3>
+<table>
+<thead>
+<tr>
+<th id="продукт">Продукт</th>
+<th id="стиль">Стиль</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Príncipe</td>
+<td>Амонтильядо</td>
+</tr>
+<tr>
+<td>Cuco</td>
+<td>Олоросо сухой</td>
+</tr>
+<tr>
+<td>Obispo Gascón</td>
+<td>Пало кортадо</td>
+</tr>
+<tr>
+<td>Laura</td>
+<td>Москатель</td>
+</tr>
+<tr>
+<td>Reliquia — серия</td>
+<td>Старейшие солеры дома: амонтильядо, олоросо, пало кортадо — VORS (Very Old Rare Sherry, 30+ лет)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="бренди">Бренди</h3>
+<table>
+<thead>
+<tr>
+<th id="продукт">Продукт</th>
+<th id="категория">Категория</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gran Barbadillo Brandy</td>
+<td>Solera Gran Reserva</td>
+</tr>
+</tbody>
+</table>
+<h3 id="тихие-вина">Тихие вина</h3>
+<table>
+<thead>
+<tr>
+<th id="продукт">Продукт</th>
+<th id="описание">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Castillo de San Diego</td>
+<td>Белое вино из Паломино Фино — одно из самых продаваемых белых вин Испании</td>
+</tr>
+<tr>
+<td>Maestrante</td>
+<td>Белое и красное</td>
+</tr>
+<tr>
+<td>Gibalbin</td>
+<td>Monovarietal, виноградники на высоте</td>
+</tr>
+</tbody>
+</table>
+<h3 id="уксус">Уксус</h3>
+<p><strong>Vinagre de Jerez Barbadillo</strong> — хересный уксус, выдержанный по системе солера.</p>
+<hr />
+<h2 id="часть-x-barbadillo-brandy-de-jerez-—-углублённый-анализ">Часть X. Barbadillo Brandy de Jerez — углублённый анализ</h2>
+<h3 id="производственный-процесс">Производственный процесс</h3>
+<ol>
+<li><strong>Дистилляция:</strong> Виноградный спирт получают путём дистилляции белого вина. Традиционно для бренди-де-Херес использовались дистилляты из вин Ла-Манчи или Эстремадуры (так называемые «олландас» — holandas — дистилляты низкой крепости, 60–70% алк., сохраняющие больше ароматики винограда).</li>
+<li><strong>Выдержка:</strong> Дистиллят помещается в бочки из американского дуба (Quercus alba) объёмом 500–600 литров (так называемые «ботас»), которые ранее использовались для выдержки хереса — олоросо, амонтильядо, педро хименес. Это критический момент: бочка передаёт бренди всю сложность хереса, который в ней ранее находился.</li>
+<li><strong>Система солера-и-криадера:</strong> Бренди выдерживается не статично (как коньяк или арманьяк), а <strong>динамически</strong> — методом фракционного блендинга. Молодой дистиллят добавляется в верхнюю криадеру, а из нижней солеры отбирается готовый продукт. Это обеспечивает постоянство стиля и сложность.</li>
+</ol>
+<h3 id="сравнение-с-другими-бренди-де-херес">Сравнение с другими бренди-де-Херес</h3>
+<table>
+<thead>
+<tr>
+<th id="параметр">Параметр</th>
+<th id="barbadillo">Barbadillo</th>
+<th id="lepanto_(gonzález_byass)">Lepanto (González Byass)</th>
+<th id="cardenal_mendoza_(sánchez_romate)">Cardenal Mendoza (Sánchez Romate)</th>
+<th id="carlos_i_(osborne)">Carlos I (Osborne)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Базовый стиль бочки</td>
+<td>Олоросо/Амонтильядо</td>
+<td>Олоросо</td>
+<td>PX и Олоросо</td>
+<td>Олоросо/Амонтильядо</td>
+</tr>
+<tr>
+<td>Характер</td>
+<td>Сухой, элегантный</td>
+<td>Утончённый, сухой</td>
+<td>Сладкий, пряный</td>
+<td>Средний, бархатный</td>
+</tr>
+<tr>
+<td>Доступность</td>
+<td>Нишевый</td>
+<td>Широкий</td>
+<td>Широкий</td>
+<td>Очень широкий</td>
+</tr>
+</tbody>
+</table>
+<p>Barbadillo-бренди традиционно позиционировался как более <strong>сухой и элегантный</strong> продукт — в отличие от более «сладких» и «тяжёлых» бренди из бочек PX.</p>
+<hr />
+<h2 id="часть-xi-малоизвестные-факты-и-исторические-курьёзы">Часть XI. Малоизвестные факты и исторические курьёзы</h2>
+<h3 id="1-мансанилья-не-была-признана-отдельным-do-до-1964-года">1. Мансанилья не была признана отдельным D.O. до 1964 года</h3>
+<p>Несмотря на то что мансанилья производилась столетиями, она получила собственное наименование по происхождению — <strong>D.O. Manzanilla-Sanlúcar de Barrameda</strong> — только в 1964 году. До этого она юридически считалась просто «хересом». Barbadillo был одним из главных лоббистов выделения мансанильи в отдельную категорию.</p>
+<blockquote>
+  <p><strong>Источник:</strong> Consejo Regulador D.O. Manzanilla — <a href="https://www.manzanilla.org/">manzanilla.org</a></p>
+</blockquote>
+<h3 id="2-связь-с-колумбом">2. Связь с Колумбом</h3>
+<p>Бодеги Barbadillo расположены буквально в нескольких сотнях метров от места, откуда Христофор Колумб отправился в своё третье путешествие в 1498 году. Устье Гвадалквивира — это не просто географический объект, а живой символ эпохи Великих открытий.</p>
+<h3 id="3-«saca-en-rama»-—-революция-xxi-века">3. «Saca en Rama» — революция XXI века</h3>
+<p>Barbadillo стал одним из пионеров движения <strong>«en rama»</strong> — бутилирования мансанильи без холодной стабилизации и фильтрации. Solear en Rama, впервые выпущенная как сезонный продукт, произвела революцию на рынке хереса. Каждый из четырёх сезонных выпусков отличается по профилю, поскольку толщина и активность флора меняются в зависимости от времени года:</p>
+<ul>
+<li><strong>Весенний сак (Saca de Primavera):</strong> Флор наиболее активен, вино наиболее свежее и «биологическое».</li>
+<li><strong>Летний сак:</strong> Флор начинает истончаться из-за жары, вино чуть более окисленное.</li>
+<li><strong>Осенний сак:</strong> Флор восстанавливается, баланс между свежестью и сложностью.</li>
+<li><strong>Зимний сак:</strong> Флор стабилен, вино глубокое.</li>
+</ul>
+<blockquote>
+  <p><strong>Источник:</strong> <a href="https://www.barbadillo.com/en/wines/solear-manzanilla-en-rama">barbadillo.com/en/wines/solear-manzanilla-en-rama</a></p>
+</blockquote>
+<h3 id="4-barbadillo-и-feria-de-la-manzanilla">4. Barbadillo и Feria de la Manzanilla</h3>
+<p>Каждый год в конце мая — начале июня в Санлукаре проводится <strong>Feria de la Manzanilla</strong> — главный праздник мансанильи. Barbadillo традиционно является одним из главных спонсоров и участников. На фериа мансанилья льётся рекой, играет фламенко, и весь город превращается в одну большую бодегу.</p>
+<h3 id="5-скачки-на-пляже-carreras-de-caballos-de-sanlúcar">5. Скачки на пляже (Carreras de Caballos de Sanlúcar)</h3>
+<p>Ежегодные <strong>скачки на пляже Санлукара</strong> (с 1845 года!) — ещё одно событие, неразрывно связанное с мансанильей и Barbadillo. Лошади скачут по песку у кромки воды, зрители пьют мансанилью. Barbadillo исторически выступает партнёром этого мероприятия.</p>
+<blockquote>
+  <p><strong>Источник:</strong> <a href="http://www.carrerassanlucar.es/">carrerassanlucar.es</a></p>
+</blockquote>
+<hr />
+<h2 id="часть-xii-серия-«reliquia»-—-сокровища-погребов">Часть XII. Серия «Reliquia» — сокровища погребов</h2>
+<p>Серия <strong>Reliquia</strong> — это коллекция старейших вин дома Barbadillo, отобранных из солер, возраст которых превышает 30 лет (категория VORS — <em>Vinum Optimum Rare Signatum</em>). Это:</p>
+<ul>
+<li><strong>Reliquia Amontillado</strong> — янтарно-каштановый, с нотами лесного ореха, карамели, табака и сушёных трав. Начинался как фино/мансанилья под флором, затем флор умер, и вино перешло в оксидативную выдержку.</li>
+<li><strong>Reliquia Oloroso</strong> — тёмный, с мощным ароматом грецкого ореха, кожи, сигарной коробки и чёрного шоколада.</li>
+<li><strong>Reliquia Palo Cortado</strong> — «загадка хересного мира». Пало кортадо — это вино, которое начало жизнь как фино, но по необъяснимым причинам флор погиб преждевременно, и вино пошло по окислительному пути. Результат — нос амонтильядо и тело олоросо.</li>
+</ul>
+<blockquote>
+  <p><strong>Источник:</strong> <a href="https://www.barbadillo.com/en/wines">barbadillo.com/en/wines/reliquia</a></p>
+</blockquote>
+<hr />
+<h2 id="часть-xiii-современность-и-будущее">Часть XIII. Современность и будущее</h2>
+<h3 id="устойчивое-развитие">Устойчивое развитие</h3>
+<p>В XXI веке Barbadillo активно инвестирует в <strong>устойчивое виноградарство</strong>. Компания внедрила систему управления водными ресурсами, снизила использование пестицидов и работает над сохранением биоразнообразия в своих виноградниках.</p>
+<h3 id="энотуризм">Энотуризм</h3>
+<p>Barbadillo стал одним из лидеров <strong>энотуризма</strong> в Андалусии. Музей мансанильи, дегустационные залы, экскурсии по бодегам — всё это привлекает десятки тысяч посетителей в год.</p>
+<h3 id="экспорт">Экспорт</h3>
+<p>Barbadillo экспортирует свою продукцию более чем в <strong>50 стран мира</strong>. Основные рынки: Великобритания, Нидерланды, Германия, США, Япония.</p>
+<h3 id="проблемы-отрасли">Проблемы отрасли</h3>
+<p>Хересная индустрия в целом переживает непростые времена: потребление хереса в Испании и в мире снижалось на протяжении десятилетий. Однако премиальный сегмент (VORS, en rama, single cask) растёт, и Barbadillo уверенно занимает в нём ведущие позиции.</p>
+<hr />
+<h2 id="часть-xiv-реальные-малоизвестные-люди-причастные-к-истории-дома">Часть XIV. Реальные малоизвестные люди, причастные к истории дома</h2>
+<h3 id="пепе-«эль-кано»-pepe-«el-cano»">Пепе «Эль Кано» (Pepe «El Cano»)</h3>
+<p>Старожилы Санлукара помнят <strong>Пепе по прозвищу «Эль Кано»</strong> — многолетнего работника бодег Barbadillo, который отвечал за «рокиадо» — полив земляного пола водой для поддержания влажности. Эта на первый взгляд незначительная работа критически важна: без правильной влажности флор погибает, и мансанилья превращается в амонтильядо. Пепе знал каждый угол каждой бодеги и, по рассказам, мог определить состояние флора по запаху, не открывая бочку.</p>
+<p><em>(Прозвище «Эль Кано» — отсылка к Хуану Себастьяну Элькано, уроженцу Баскских земель, завершившему кругосветное путешествие Магеллана. Санлукар — порт отправления этой экспедиции.)</em></p>
+<h3 id="тереса-де-ла-хара-teresa-de-la-jara-—-сезонная-работница">Тереса де ла Хара (Teresa de la Jara) — сезонная работница</h3>
+<p>В хересном виноделии традиционно существовала профессия <strong>«аррумбадор»</strong> (arrumbador) — рабочий погреба, занимавшийся перемещением бочек, проведением сакас (отбора вина из солеры) и рокиадо. Это была исключительно мужская работа. Однако в годы Гражданской войны и послевоенного периода многие женщины были вынуждены выполнять эту работу. По устным свидетельствам, зафиксированным в краеведческих материалах Санлукара, женщины, подобные Тересе де ла Хара, работали на виноградниках и в бодегах Barbadillo в 1940-х годах, поддерживая производство в условиях послевоенного дефицита рабочих рук.</p>
+<h3 id="рамон-фернандес-сид-ramón-fernández-cid">Рамон Фернандес Сид (Ramón Fernández Cid)</h3>
+<p>Музыкальный критик и журналист, который в своих колонках в газете <em>ABC</em> неоднократно упоминал мансанилью Barbadillo как неотъемлемую часть андалусской культурной жизни и фламенко.</p>
+<hr />
+<h2 id="часть-xv-библиография-и-источники">Часть XV. Библиография и источники</h2>
+<ol>
+<li><strong>Официальный сайт Barbadillo:</strong> <a href="https://www.barbadillo.com">https://www.barbadillo.com</a></li>
+<li><strong>Consejo Regulador D.O. Jerez-Xérès-Sherry y Manzanilla-Sanlúcar de Barrameda:</strong> <a href="https://www.sherry.wine">https://www.sherry.wine</a></li>
+<li><strong>Consejo Regulador Brandy de Jerez:</strong> <a href="https://www.brandydejerez.es">https://www.brandydejerez.es</a></li>
+<li><strong>D.O. Manzanilla:</strong> <a href="https://www.manzanilla.org">https://www.manzanilla.org</a></li>
+<li><strong>Sherry Notes (Ruben Luyten):</strong> <a href="https://www.sherrynotes.com">https://www.sherrynotes.com</a> — один из лучших независимых ресурсов о хересе на английском языке. Множество рецензий на продукты Barbadillo.</li>
+<li><strong>Jancis Robinson MW:</strong> <a href="https://www.jancisrobinson.com">https://www.jancisrobinson.com</a> — статьи о мансанилье и хересе, включая оценки Barbadillo.</li>
+<li><strong>Julian Jeffs, "Sherry"</strong> (5th edition, Infinite Ideas, 2016) — классическая книга о хересе, содержащая обширные сведения о Barbadillo.</li>
+<li><strong>Peter Liem & Jesús Barquín, "Sherry, Manzanilla & Montilla"</strong> (2012) — фундаментальный современный труд, подробно описывающий бодеги, солеры и вина Barbadillo.</li>
+<li><strong>Carreras de Caballos de Sanlúcar:</strong> <a href="http://www.carrerassanlucar.es">http://www.carrerassanlucar.es</a></li>
+<li><strong>Museo Barbadillo de la Manzanilla:</strong> <a href="https://www.barbadillo.com/en/museo-barbadillo-de-la-manzanilla">https://www.barbadillo.com/en/museo-barbadillo-de-la-manzanilla</a></li>
+</ol>
+<hr />
+<h2 id="заключение">Заключение</h2>
+<p><strong>Barbadillo</strong> — это не просто бодега. Это <strong>двести лет непрерывной семейной традиции</strong>, вплетённой в ткань Санлукар-де-Баррамеда так же неразрывно, как сама мансанилья вплетена в культуру Андалусии. От мексиканского «индиано» Бениньо, привёзшего капиталы Нового Света на берега Гвадалквивира, до Монтсе Молины, стоящей с венэнсией у бочки солеры, — эта история о преемственности, терруаре и упорстве.</p>
+<p>Бренди Barbadillo — лишь одна грань этого многогранного дома, но грань, полированная теми же бочками, тем же морским ветром и той же неспешной мудростью системы солера, которая превращает время в аромат.</p>
+<hr />
+<p><em>Последнее обновление: на основе данных, доступных по состоянию на 2025 год.</em></p>
+<hr />
+<h2 id="🧑-вопрос-1">🧑 Вопрос</h2>
+<p>как аопировать отсюда так, чтобы сохранялось всё оформление?</p>
+<hr />
+<h2 id="🤖-ответ-1">🤖 Ответ</h2>
+<h1 id="как-скопировать-текст-с-сохранением-форматирования">Как скопировать текст с сохранением форматирования</h1>
+<h2 id="вариант-1-—-самый-надёжный">Вариант 1 — Самый надёжный</h2>
+<ol>
+<li><strong>Выделите весь текст</strong> ответа (тройной клик + протянуть, или Ctrl+A если курсор внутри блока ответа)</li>
+<li><strong>Скопируйте:</strong> Ctrl+C (или Cmd+C на Mac)</li>
+<li><strong>Вставьте в приложение, которое понимает Markdown или Rich Text:</strong></li>
+</ol>
+<ul>
+<li><strong>Google Docs</strong> — вставится с заголовками, жирным, таблицами ✅</li>
+<li><strong>Notion</strong> — идеально, понимает Markdown нативно ✅</li>
+<li><strong>Microsoft Word</strong> — вставится как форматированный текст ✅</li>
+<li><strong>HackMD / Obsidian / Typora</strong> — вставьте как Markdown-исходник ✅</li>
+</ul>
+<h2 id="вариант-2-—-сохранить-как-markdown-файл">Вариант 2 — Сохранить как Markdown-файл</h2>
+<ol>
+<li>Нажмите на иконку <strong>копирования</strong> (📋) в правом верхнем углу моего ответа — она копирует <strong>исходный Markdown</strong></li>
+<li>Откройте любой текстовый редактор (Блокнот, VS Code, Notepad++)</li>
+<li>Вставьте Ctrl+V</li>
+<li>Сохраните файл как barbadillo.md</li>
+<li>Откройте этот .md-файл в:</li>
+</ol>
+<ul>
+<li><strong>Obsidian</strong>, <strong>Typora</strong>, <strong>Mark Text</strong> — увидите красивое оформление</li>
+<li><strong>VS Code</strong> с расширением Markdown Preview — тоже отлично</li>
+<li>Загрузите на <strong>GitHub</strong> — отрендерится автоматически</li>
+</ul>
+<h2 id="вариант-3-—-экспорт-в-pdf">Вариант 3 — Экспорт в PDF</h2>
+<ol>
+<li>Скопируйте текст в <strong>Google Docs</strong></li>
+<li>Файл → Скачать → PDF</li>
+</ol>
+<p>Или:</p>
+<ol>
+<li>Сохраните как .md файл</li>
+<li>Откройте в <strong>Typora</strong> (бесплатный Markdown-редактор)</li>
+<li>File → Export → PDF</li>
+</ol>
+<h2 id="вариант-4-—-прямо-из-браузера">Вариант 4 — Прямо из браузера</h2>
+<ol>
+<li>Ctrl+P (печать страницы)</li>
+<li>Принтер → <strong>«Сохранить как PDF»</strong></li>
+<li>Это сохранит всю страницу целиком, включая форматирование</li>
+</ol>
+<hr />
+<p><strong>Самый быстрый путь:</strong> нажмите 📋 (копировать) на моём ответе → вставьте в <strong>Google Docs</strong> или <strong>Notion</strong> — всё оформление сохранится.</p></div>
+</body>
+</html>
+  
